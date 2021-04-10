@@ -1,0 +1,129 @@
+* {
+    margin : 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* La grille */
+body {
+    align-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+table {
+    width: 50%;
+    height: 100%;
+    background: rgb(51, 51, 51);
+}
+
+td {
+    height: 10px;
+    background: black;
+}
+
+
+/* Menu / options */
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#menu {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#boutonGoStop {
+    display: flex;
+}
+
+#boutonGoStop button {
+    background: none;
+    border: 2px solid black;
+    margin: 10px;
+    transition: background 0.2s ease;
+    cursor: not-allowed;
+}
+
+li *{
+    align-items: center;
+    justify-content: center;
+}
+
+#boutonGoStop button.ready {
+    background-color: rgb(10, 87, 149);
+    border: none;
+    color : white;
+    cursor: pointer;
+}
+
+.tileHandler {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    border : 2px solid black;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.tileHandler span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tileHandler ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 100px;
+}
+
+.tileHandler ul li{
+    display: flex;
+}
+
+.tileHandler ul li *{
+    margin-right: 5px;
+}
+
+.tileHandler ul li select{
+    min-width: 30px;
+}
+
+.tileHandler ul li img {
+    width: 25px;
+    height: auto;
+}
+
+.tileHandler button {
+    margin-top: 5px;
+    background: none;
+    transition: background 0.1s ease-in-out;
+}
+
+.tileHandler button:hover {
+    color: white;
+    background : rgb(1, 61, 129);
+}
+
+/* Différents états */
+td.alive {
+    background: white;
+}
+
+.wall {
+    background: rebeccapurple;
+}
+
+.invicible {
+    background: yellow;
+}
